@@ -92,7 +92,7 @@ section {
     background: url(images/2.png) no-repeat;
     background-size: 25%;
     background-position: right;
-}*
+}
 
 .home-content {
     max-width: 60rem;
@@ -116,6 +116,12 @@ section {
     width: 32.8rem;
 }
 
+.home-sci .text-animate {
+    position: relative;
+    width: 32.8rem;
+}
+
+
 .home-content .text-animate h3 {
     font-size: 3.2rem;
     font-weight: 700;
@@ -125,6 +131,9 @@ section {
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -33rem 0;
+}
+
+.home.show-animate .home-content .text-animate h3 {
     animation: homeBgText 6s linear infinite;
     animation-delay: 2s;
 }
@@ -138,6 +147,9 @@ section {
     height: 100%;
     border-right: 2px solid var(--main-color);
     z-index: -1;
+}
+
+.home.show-animate .home-content .text-animate h3::before {
     animation: homeCursorText 6s linear infinite;
     animation-delay: 2s;
 }
@@ -210,9 +222,13 @@ section {
 .home-sci {
     position: absolute;
     bottom: 4rem;
-    width: 170px;
+    width:25%;
     display: flex;
     justify-content: space-between;
+}
+
+.h2 {
+    font-size: 20px;
 }
 
 .home-sci a {
@@ -325,6 +341,11 @@ span {
     text-align: center;
 }
 
+#dots,
+#more {
+    color: white;
+}
+
 .about-content h3 {
     position: relative;
     display: inline-block;
@@ -335,6 +356,7 @@ span {
     position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+    text-align:justify;
 }
 
 .btn-box.btns {
@@ -399,6 +421,7 @@ span {
     border: .2rem solid var(--main-color);
     border-radius: 1rem;
     margin-bottom: 2rem;
+    text-align: justify;
 }
 
 .education-content .content::before {
@@ -660,6 +683,11 @@ span {
     color: white;
 }
 
+.footer-text,
+.footer-icontop {
+    position: relative;
+}
+
 .footer-text p {
     font-size: 1.6rem;
 }
@@ -709,7 +737,7 @@ span {
     right: 0;
     width: 100%;
     height: 100%;
-    background: yellowgreen;
+    background: var(--bg-color);
     z-index: 98;
 }
 
@@ -731,6 +759,11 @@ span {
     animation: none;
 }
 
+section:nth-child(odd) .animate.scroll,
+.footer .animate.scroll {
+    background: #112e42;
+}
+
 .education .education-box .animate.scroll {
     width: 105%;
 }
@@ -738,7 +771,8 @@ span {
 .about.show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
-.contact.show-animate .animate.scroll {
+.contact.show-animate .animate.scroll,
+.footer.show-animate .animate.scroll {
     transition-delay: calc(.3s * var(--i));
     width: 0;
 }
@@ -746,6 +780,14 @@ span {
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+
+    .home-sci {
+        width: 30%;
     }
 }
 
@@ -764,6 +806,12 @@ span {
 
     .footer {
         padding: 2rem 4%;
+    }
+}
+
+@media (max-width: 850px) {
+    .animate.home-img {
+        width: 55%;
     }
 }
 
@@ -846,7 +894,11 @@ span {
     }
 
     .home-sci {
-        width: 160px;
+        width: 55%;
+    }
+
+    h2 {
+        font-size: 10px;
     }
 
     .home-sci a {
