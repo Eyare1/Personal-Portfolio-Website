@@ -102,7 +102,9 @@
                 deliverd an excellent result. These experiences have not only sharpened my technical 
                 skills but also reinforced my commitment to delivering high-quality, scalable, and 
                 efficient solutions. Let's connect and explore how my skills and enthusiasm can contribute 
-                to your next big venture. Together, we can build the future, one line of code at a time</span>
+                to your next big venture. Together, we can build the future, one line of code at a time</br>
+                Feel free to check out some of my projects!
+            </span>
 
                 <span class="animate scroll" style="--i:4;"></span>
             </p>
@@ -326,14 +328,14 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span><span class="animate scroll" style="--i:1;"></span></h2>
 
-        <form action="#">
+        <form action="" id="contactForm">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" placeholder="Full Name" id="name" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Address" required>
+                    <input type="text" placeholder="Email Address" id="email" required>
                     <span class="focus"></span>
                 </div>
 
@@ -342,11 +344,11 @@
 
             <div class="input-box">
                 <div class="input-field">
-                    <input type="number" placeholder="Mobile Number" required>
+                    <input type="number" placeholder="Mobile Number" id="phone" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Subject" required>
+                    <input type="text" placeholder="Email Subject" id="subject" required>
                     <span class="focus"></span>
                 </div>
 
@@ -354,7 +356,7 @@
             </div>
 
             <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <textarea name=""  id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <span class="focus"></span>
 
                 <span class="animate scroll" style="--i:7;"></span>
@@ -365,11 +367,11 @@
 
                 <span class="animate scroll" style="--i:2;"></span>
             </div>
+            
         </form>
 
-       
-
     </section>
+
 
     <footer class="footer">
         <div class="footer-text">
@@ -386,6 +388,10 @@
     </footer>
 
     <script type="text/javascript" src="script.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 
